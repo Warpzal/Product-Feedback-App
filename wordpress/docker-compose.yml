@@ -1,32 +1,30 @@
 version: '3.3'
 
-services: 
-  wordpress:
-    depends_on:
-      - db
-    build: .
-    restart: always
-    ports:
-      - 8080:80
-    environment:
-      WORPRESS_DB_HOST: db
-      WORPRESS_DB_USER: admin
-      WORPRESS_DB_PASSWORD: root
-      WORPRESS_DB_NAME: feedbackdb
-    volumes:
-      - ./wp-content:/var/www/html/wp-content
-
-  db:
-    image: mysql:latest
-    command: '--innodb_use_native_aio=0 --default-authentication-plugin=mysql_native_password'
-    restart: always
-    ports:
-      - 3606:3606
-    environment:
-      MYSQL_DATABASE: feedbackdb  
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: root
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
-    volumes:
-      # - ./database:/docker-entrypoint-initdb.d
-      - ./mysql:/var/lib/mysql
+services:
+    wordpress:
+        depends_on:
+            - db
+        build: .
+        restart: always
+        ports:
+            - 8080:80
+        environment:
+            WORPRESS_DB_HOST: db
+            WORPRESS_DB_USER: admin
+            WORPRESS_DB_PASSWORD: root
+            WORPRESS_DB_NAME: feedbackdb
+        volumes:
+            - ./wp-content:/var/www/html/wp-content
+    db:
+        image: mysql:latest
+        command: '--innodb_use_native_aio=0 --default-authentication-plugin=mysql_native_password'
+        restart: always
+        ports:
+            - 3606:3606
+        environment:
+            MYSQL_DATABASE: feedbackdb
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: root
+            MYSQL_RANDOM_ROOT_PASSWORD: '1'
+        volumes:
+            - ./database:/docker-entrypoint-initdb.d
