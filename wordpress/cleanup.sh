@@ -7,9 +7,3 @@ fi
 
 echo "Stopping Containers"
 docker-compose down -v
-
-# echo "Cleaning wp-data Folder"
-# cd wp-data
-
-# find -maxdepth 1 ! -path . ! -path './wp-content' -not -path './wp-content/*' -type d -exec rm -rv {} +
-# find . -maxdepth 1 ! -name 'wp-config.php' -not -path './wp-content/*' -type f -delete 
