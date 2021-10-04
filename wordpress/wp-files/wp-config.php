@@ -21,7 +21,7 @@
 define('FS_METHOD', 'direct');
 define('FTP_BASE', '/var/www/html/');
 define('FTP_CONTENT_DIR', '/var/www/html/wp-content/');
-define('FTP_PLUGIN_DIR ', '/var/www/html/wp-content/plugins/');
+define('FTP_PLUGIN_DIR', '/var/www/html/wp-content/plugins/');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */

@@ -20,7 +20,7 @@ class SuggestionPostType implements Hookable {
         register_post_type(self::SLUG, [
 			'labels'              => $this->generate_labels(self::GRAPHQL_SINGLE_NAME, self::GRAPHQL_PLURAL_NAME),
             'public'              => true,
-            'supports'            => ['title', 'comments', 'custom-fields'],
+            'supports'            => ['title', 'comments'],
             'show_in_graphql'     => true,
             'graphql_single_name' => self::GRAPHQL_SINGLE_NAME,
             'graphql_plural_name' => self::GRAPHQL_PLURAL_NAME,

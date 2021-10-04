@@ -13,6 +13,7 @@ add_action( 'plugins_loaded', function() {
     $dependencies = [
         'Composer autoload files' => is_readable( $autoload ),
         'WPGraphQL' => class_exists('WPGraphQL'),
+        'ACF' => class_exists('ACF'),
     ];
 
     $missing_dependencies = array_keys(array_diff($dependencies, array_filter($dependencies)));

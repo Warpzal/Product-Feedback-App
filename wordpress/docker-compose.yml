@@ -15,6 +15,7 @@ services:
             WORPRESS_DB_NAME: feedbackdb
         volumes:
             - ./wp-content:/var/www/html/wp-content
+            - ./wp-files/composer.json:/var/www/html/composer.json
     db:
         image: mariadb:latest
         restart: always
