@@ -2,6 +2,10 @@
 
 namespace ProductFeedbackPlugin;
 
+/**
+ * Plugin entry point
+ * Plugin Boilerplate by: https://github.com/kellenmace/wordpress-plugin-boilerplate
+ */
 final class ProductFeedbackPlugin {
 	private $instances = [];
 
