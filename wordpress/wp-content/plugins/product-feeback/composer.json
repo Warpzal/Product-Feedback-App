@@ -1,0 +1,12 @@
+{
+  "name": "product-feedback-plugin/product-feedback-plugin",
+  "description": "Product Feedback Plugin",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "ProductFeedbackPlugin\\": "src/"
+    }
+  }
+}
