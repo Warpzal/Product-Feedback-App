@@ -2,10 +2,12 @@ This is a Dockerized [Wordpress](https://wordpress.org/) project
 
 ## Getting Started
 
-First, create the containers Wordpress and MySQL using docker-compose
+First, create the containers Wordpress and MySQL using the start up script
 
 ```bash
-docker-compose up -d
+./startup.sh
+# or
+./startup.sh install # Create containers and install WP plugins
 ```
 
 Once containers are spun up, you can visit the Wordpress site:

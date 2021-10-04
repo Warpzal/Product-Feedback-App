@@ -1,4 +1,6 @@
 .env.local
 .env
-wp-content/plugins/akismet
-wp-content/plugins/hello.php
+
+wp-content/plugins/*
+!wp-content/plugins/product-feedback
+!wp-content/plugins/index.php
