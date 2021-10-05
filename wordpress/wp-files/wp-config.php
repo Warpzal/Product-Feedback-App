@@ -18,6 +18,9 @@
  * @package WordPress
  */
 
+define( 'WP_HOME', getenv('WP_ADDRESS') );
+define( 'WP_SITEURL', getenv('WP_SITE_ADDRESS') );
+
 define('FS_METHOD', 'direct');
 define('FTP_BASE', '/var/www/html/');
 define('FTP_CONTENT_DIR', '/var/www/html/wp-content/');

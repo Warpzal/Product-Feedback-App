@@ -2,7 +2,9 @@ This is a Dockerized [Wordpress](https://wordpress.org/) project
 
 ## Getting Started
 
-First, create the containers Wordpress and MySQL using the start up script
+First, create a .env file following the format of the .env.example file
+
+Second, create the containers Wordpress and MySQL using the start up script
 
 ```bash
 ./startup.sh
