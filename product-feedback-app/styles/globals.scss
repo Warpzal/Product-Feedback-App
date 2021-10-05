@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+}
+
+// Temporary partials while I try to figure out how to modularize scss in Next
+@import '../components/Navigation/Navigation.module.scss';
