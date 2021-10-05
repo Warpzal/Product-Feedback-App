@@ -8,11 +8,7 @@ services:
         restart: always
         ports:
             - 8080:80
-        environment:
-            WORPRESS_DB_HOST: db
-            WORPRESS_DB_USER: admin
-            WORPRESS_DB_PASSWORD: root
-            WORPRESS_DB_NAME: feedbackdb
+        env_file: .env
         volumes:
             - ./wp-content:/var/www/html/wp-content
             - ./wp-files/composer.json:/var/www/html/composer.json
@@ -21,10 +17,6 @@ services:
         restart: always
         ports:
             - 3606:3606
-        environment:
-            MYSQL_DATABASE: feedbackdb
-            MYSQL_USER: admin
-            MYSQL_PASSWORD: root
-            MYSQL_RANDOM_ROOT_PASSWORD: '1'
+        env_file: .env
         volumes:
             - ./database:/docker-entrypoint-initdb.d
