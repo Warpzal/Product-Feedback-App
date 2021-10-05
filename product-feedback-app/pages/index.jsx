@@ -1,5 +1,11 @@
-import Navigation from '../components/Navigation/Navigation.jsx'
+import NavigationMobile from '../components/Navigation/NavigationMobile.jsx'
 
-export default function Home() {
-	return <Navigation />
+function Home() {
+	return (
+		<div>
+			<NavigationMobile />
+		</div>
+	)
 }
+
+export default Home

@@ -1,4 +1,5 @@
 .nav {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -7,6 +8,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;
+
 	&__title {
 		font-size: 1.6rem;
 		font-weight: 500;
@@ -16,5 +18,29 @@
 	}
 	&__menu {
 		font-size: 3rem;
+		cursor: pointer;
+	}
+	&__items {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		width: 50%;
+		height: 100vh;
+
+		gap: 1rem;
+
+		padding: 3rem 2rem;
+		background: $color-background;
+	}
+	&__overlay {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 50%;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.4);
+	}
+	@include mq('sm') {
+		display: none;
 	}
 }
