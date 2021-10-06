@@ -1,6 +1,6 @@
 function RoadMap() {
 	return (
-		<div className="roadmap card is-block">
+		<div className="Roadmap roadmap card is-rounded is-block">
 			<div className="roadmap__top is-block">
 				<h2 className="roadmap__title">Roadmap</h2>
 				<a className="roadmap__view" href="#">

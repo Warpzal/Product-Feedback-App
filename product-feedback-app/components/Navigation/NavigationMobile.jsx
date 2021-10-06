@@ -7,7 +7,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons' // import th
 import { useState } from 'react'
 
 function Navigation() {
-	const [isOpenMenu, setOpenMenu] = useState(true)
+	const [isOpenMenu, setOpenMenu] = useState(false)
 	const toggleMenu = () => setOpenMenu(!isOpenMenu)
 
 	return (

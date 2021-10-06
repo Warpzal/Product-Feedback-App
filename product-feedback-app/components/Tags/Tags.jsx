@@ -1,6 +1,6 @@
 function Tags() {
 	return (
-		<div className="card is-block">
+		<div className="Tags card is-rounded is-block">
 			<div className="button button--active">All</div>
 			<div className="button">UI</div>
 			<div className="button">UX</div>

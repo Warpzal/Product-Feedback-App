@@ -1,0 +1,21 @@
+.header {
+	position: relative;
+	padding: 2rem;
+	padding-top: 5rem;
+	font-size: 1.6rem;
+	min-height: 15rem;
+	color: white;
+	background-image: url(https://hopeful-murdock-83580e.netlify.app/img/background-header.254059f1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__content {
+		position: absolute;
+		bottom: 3rem;
+	}
+	&__title {
+		font-weight: 600;
+	}
+	&__sub-title {
+		font-size: 1.2rem;
+	}
+}

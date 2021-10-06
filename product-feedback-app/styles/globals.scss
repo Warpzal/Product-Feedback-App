@@ -26,12 +26,15 @@ $breakpoints: (
 	margin-bottom: 2rem;
 }
 
+.is-rounded {
+	border-radius: 1rem;
+}
+
 .card {
 	width: 100%;
 	color: $color-text;
 	background: white;
 	padding: 2rem;
-	border-radius: 1rem;
 	min-height: 1rem;
 }
 
@@ -68,6 +71,7 @@ html {
 body {
 	font-family: 'Jost', sans-serif;
 	color: $color-text;
+	background: $color-background;
 }
 
 // a,
@@ -77,5 +81,7 @@ body {
 // }
 
 // Temporary partials while I try to figure out how to modularize scss in Next
+@import '../pages/index.scss';
 @import '../components/Navigation/Navigation.module.scss';
 @import '../components/RoadMap/RoadMap.scss';
+@import '../components/TheHeader/TheHeader.module.scss';

@@ -40,7 +40,7 @@
 		height: 100vh;
 		background: rgba(0, 0, 0, 0.4);
 	}
-	// @include mq('sm') {
-	// 	display: none;
-	// }
+	@include mq('md') {
+		display: none;
+	}
 }
