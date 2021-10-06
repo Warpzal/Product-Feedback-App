@@ -12,13 +12,13 @@ args=$@
 
 if `contains "$args" build` ; then
     echo "Building Images & Starting Containers"
-    echo "docker-compose up -d --build"
+    docker-compose up -d --build
 else 
     echo "Starting Containers"
-    echo "docker-compose up -d"
+    docker-compose up -d
 fi
 
 if `contains "$args" install` ; then
     echo "Installing Plugins"
-    echo "docker-compose exec wordpress composer install"
+    docker-compose exec wordpress composer install
 fi
