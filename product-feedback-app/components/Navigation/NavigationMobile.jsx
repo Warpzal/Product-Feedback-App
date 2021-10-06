@@ -1,4 +1,7 @@
 import Tags from '../Tags/Tags.jsx'
+import RoadMap from '../RoadMap/RoadMap.jsx'
+
+import 'animate.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Import the FontAwesomeIcon component
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons' // import the icons you need
@@ -6,7 +9,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons' // import th
 import { useState } from 'react'
 
 function Navigation() {
-	const [isOpenMenu, setOpenMenu] = useState(false)
+	const [isOpenMenu, setOpenMenu] = useState(true)
 	const toggleMenu = () => setOpenMenu(!isOpenMenu)
 
 	return (
@@ -31,11 +34,14 @@ function Navigation() {
 				)}
 			</div>
 			{isOpenMenu && (
-				<div className="nav__items">
+				<div className="nav__items animate__animated animate__fadeInRight">
 					<Tags />
+					<RoadMap />
 				</div>
 			)}
-			{isOpenMenu && <div className="nav__overlay"></div>}
+			{isOpenMenu && (
+				<div className="nav__overlay animate__animated animate__fadeInLeft"></div>
+			)}
 		</nav>
 	)
 }

@@ -1,32 +1,9 @@
 @use 'sass:map';
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600;700&display=swap');
 
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-// Resize Rem units to = 10px
-html {
-	font-size: 62.5%;
-}
-
-body {
-	font-family: 'Jost', sans-serif;
-}
-
-a,
-a:visited,
-a:focus {
-	color: white;
-	text-decoration: none;
-}
-
 // Global Variables
 $color-background: #f7f8fd;
+$color-text: #3a4374;
 $color-button-text: #4661e6;
 
 // Mixin for Media Queries mobile first (Tailwind style)
@@ -45,8 +22,13 @@ $breakpoints: (
 }
 
 // Reusable Utilitiy Classes
+.is-block {
+	margin-bottom: 2rem;
+}
+
 .card {
 	width: 100%;
+	color: $color-text;
 	background: white;
 	padding: 2rem;
 	border-radius: 1rem;
@@ -61,13 +43,39 @@ $breakpoints: (
 	border-radius: 0.8rem;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
-	padding: 0.5rem 1.4rem;
+	padding: 0.5rem 1.2rem;
 	text-transform: capitalize;
+
 	&--active {
 		background: $color-button-text;
 		color: $color-background;
 	}
 }
 
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// Resize Rem units to = 10px
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+	color: $color-text;
+}
+
+// a,
+// a:visited,
+// a:focus {
+
+// }
+
 // Temporary partials while I try to figure out how to modularize scss in Next
 @import '../components/Navigation/Navigation.module.scss';
+@import '../components/RoadMap/RoadMap.scss';

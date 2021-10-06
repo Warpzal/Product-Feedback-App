@@ -23,8 +23,8 @@
 	&__items {
 		position: absolute;
 		top: 100%;
-		left: 50%;
-		width: 50%;
+		left: 40%;
+		width: 60%;
 		height: 100vh;
 
 		gap: 1rem;
@@ -36,11 +36,11 @@
 		position: absolute;
 		top: 100%;
 		left: 0;
-		width: 50%;
+		width: 40%;
 		height: 100vh;
 		background: rgba(0, 0, 0, 0.4);
 	}
-	@include mq('sm') {
-		display: none;
-	}
+	// @include mq('sm') {
+	// 	display: none;
+	// }
 }
