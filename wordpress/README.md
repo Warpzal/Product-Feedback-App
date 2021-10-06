@@ -10,6 +10,8 @@ Second, create the containers Wordpress and MySQL using the start up script
 ./startup.sh
 # or
 ./startup.sh install # Create containers and install WP plugins
+# or
+./startup.sh build # Rebuild Docker images and create containers
 ```
 
 Once containers are spun up, you can visit the Wordpress site:

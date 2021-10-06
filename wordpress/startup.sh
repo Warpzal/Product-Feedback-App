@@ -1,9 +1,24 @@
 #!/bin/bash
 
-echo "Starting Containers"
-docker-compose up -d
+contains() {
+    if [[ "$1" =~ (^|[[:space:]])"$2"($|[[:space:]]) ]] ; then
+        return 0
+    else
+        return 1
+    fi
+}
 
-if [ "$1" = "install" ] ; then
+args=$@
+
+if `contains "$args" build` ; then
+    echo "Building Images & Starting Containers"
+    echo "docker-compose up -d --build"
+else 
+    echo "Starting Containers"
+    echo "docker-compose up -d"
+fi
+
+if `contains "$args" install` ; then
     echo "Installing Plugins"
-    docker-compose exec wordpress composer install
+    echo "docker-compose exec wordpress composer install"
 fi
