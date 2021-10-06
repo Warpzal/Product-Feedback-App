@@ -1,8 +1,6 @@
 import Tags from '../Tags/Tags.jsx'
 import RoadMap from '../RoadMap/RoadMap.jsx'
 
-import 'animate.css'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Import the FontAwesomeIcon component
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons' // import the icons you need
 
