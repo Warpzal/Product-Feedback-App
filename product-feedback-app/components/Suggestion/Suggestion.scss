@@ -1,0 +1,44 @@
+.suggestion {
+	&__title {
+		font-size: 1.4rem;
+		font-weight: bold;
+		margin-bottom: 0.8rem;
+	}
+
+	&__description {
+		font-size: 1.1rem;
+		font-weight: 300;
+		margin-bottom: 0.8rem;
+	}
+
+	&__tag {
+		font-size: 1.2rem;
+	}
+
+	&__bottom-bar {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.2rem;
+	}
+
+	&__angleUp {
+		color: $color-text;
+	}
+	&__commentIcon {
+		color: darken($color-background, 10%);
+	}
+
+	&__likes {
+		color: $color-text;
+		margin-left: 1rem;
+		font-weight: bold;
+	}
+
+	&__comments {
+		display: flex;
+		align-items: center;
+	}
+	&__comments-num {
+		margin-left: 1rem;
+	}
+}

@@ -1,0 +1,38 @@
+.topbar {
+	background: $color-text;
+	color: white;
+	width: 100%;
+	height: 5rem;
+	padding: 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__sort {
+		font-size: 1.4rem;
+		font-weight: 300;
+	}
+	&__heading {
+		display: none;
+		font-size: 2rem;
+		font-weight: 600;
+		margin-right: 4rem;
+	}
+	&__button {
+		cursor: pointer;
+		@include is-rounded;
+		font-size: 1.2rem;
+		padding: 1rem 2rem;
+		background: #ad1fea;
+		color: white;
+		border: none;
+	}
+
+	@include mq(md) {
+		@include is-rounded;
+		height: 6rem;
+		&__heading {
+			display: inline;
+		}
+	}
+}

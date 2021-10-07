@@ -21,7 +21,16 @@ $breakpoints: (
 	}
 }
 
+@mixin is-rounded() {
+	border-radius: 1rem;
+}
+
 // Reusable Utilitiy Classes
+
+.font-sm {
+	font-size: 1rem;
+}
+
 .is-block {
 	margin-bottom: 2rem;
 }
@@ -39,16 +48,17 @@ $breakpoints: (
 }
 
 .button {
+	cursor: pointer;
 	display: inline-block;
-	font-size: 1.4rem;
 	background-color: $color-background;
 	color: $color-button-text;
 	border-radius: 0.8rem;
-	margin-right: 1rem;
-	margin-bottom: 1rem;
 	padding: 0.5rem 1.2rem;
 	text-transform: capitalize;
-
+	&--tag {
+		margin-bottom: 1rem;
+		margin-right: 1rem;
+	}
 	&--active {
 		background: $color-button-text;
 		color: $color-background;
@@ -85,3 +95,6 @@ body {
 @import '../components/Navigation/Navigation.module.scss';
 @import '../components/RoadMap/RoadMap.scss';
 @import '../components/TheHeader/TheHeader.module.scss';
+@import '../components/Tags/Tags.scss';
+@import '../components/TopBar/TopBar.module.scss';
+@import '../components/Suggestion/Suggestion.scss';

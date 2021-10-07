@@ -8,10 +8,10 @@ import { useState } from 'react'
 
 function Navigation() {
 	const [isOpenMenu, setOpenMenu] = useState(false)
-	const toggleMenu = () => setOpenMenu(!isOpenMenu)
+	const toggleMenu = () => setOpenMenu((isOpen) => !isOpen)
 
 	return (
-		<nav className="nav">
+		<nav className="nav Navigation">
 			<div className="nav__left">
 				<p className="nav__title">Frontend Mentor</p>
 				<p className="nav__sub-title">Feedback Board</p>
