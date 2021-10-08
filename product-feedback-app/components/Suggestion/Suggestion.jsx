@@ -19,7 +19,10 @@ function Suggestion({ title, description, tags, likes, comments }) {
 				<div className="suggestion__tags">
 					{tags.map((tag) => {
 						return (
-							<div className="button button--tag suggestion__tag">
+							<div
+								className="button button--tag suggestion__tag"
+								key={tag}
+							>
 								{tag}
 							</div>
 						)

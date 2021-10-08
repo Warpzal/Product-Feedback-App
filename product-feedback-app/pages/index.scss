@@ -18,11 +18,12 @@
 			'Suggestion Suggestion Suggestion';
 	}
 	@include mq('xl') {
+		grid-template-columns: repeat(4, 1fr);
 		grid-template-areas:
-			'TheHeader TopBar TopBar'
-			'TheHeader Suggestion Suggestion'
-			'Tags Suggestion Suggestion'
-			'Roadmap Suggestion Suggestion';
+			'TheHeader TopBar TopBar TopBar'
+			'TheHeader Suggestion Suggestion Suggestion'
+			'Tags Suggestion Suggestion Suggestion'
+			'Roadmap Suggestion Suggestion Suggestion';
 	}
 }
 
