@@ -1,24 +1,45 @@
 .suggestion {
+	display: grid;
+	grid-template-areas:
+		'mainContent mainContent'
+		'likes comments';
+
+	gap: 1rem;
+
+	@include mq(md) {
+		grid-template-columns: 10% 80% 10%;
+		grid-template-areas: 'likes mainContent comments';
+	}
+	&__main-content {
+		grid-area: mainContent;
+	}
 	&__title {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		font-weight: bold;
 		margin-bottom: 0.8rem;
 	}
 
 	&__description {
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 		font-weight: 300;
 		margin-bottom: 0.8rem;
 	}
 
-	&__tag {
-		font-size: 1.2rem;
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		@include mq(md) {
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+		max-width: fit-content;
 	}
 
-	&__bottom-bar {
-		display: flex;
-		justify-content: space-between;
-		font-size: 1.2rem;
+	&__tag {
+		font-size: 1.3rem;
 	}
 
 	&__angleUp {
@@ -29,14 +50,21 @@
 	}
 
 	&__likes {
+		grid-area: likes;
+		font-size: 1.2rem;
 		color: $color-text;
-		margin-left: 1rem;
 		font-weight: bold;
 	}
 
 	&__comments {
+		grid-area: comments;
+		font-size: 1.6rem;
 		display: flex;
+		justify-content: flex-end;
 		align-items: center;
+		@include mq(md) {
+			justify-content: flex-start;
+		}
 	}
 	&__comments-num {
 		margin-left: 1rem;

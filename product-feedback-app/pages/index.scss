@@ -20,6 +20,7 @@
 	@include mq('xl') {
 		grid-template-areas:
 			'TheHeader TopBar TopBar'
+			'TheHeader Suggestion Suggestion'
 			'Tags Suggestion Suggestion'
 			'Roadmap Suggestion Suggestion';
 	}
