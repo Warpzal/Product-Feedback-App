@@ -7,10 +7,11 @@ use ProductFeedbackPlugin\Interfaces\Hookable;
 use ProductFeedbackPlugin\Utils\PostTypeUtility;
 use ProductFeedbackPlugin\PostTypes\SuggestionPostType;
 
-class CreateSuggestion implements Hookable {
+// TODO: Refactor duplicate CreateSuggestion Code
+class UpdateSuggestion implements Hookable {
     use PostTypeUtility;
 
-    const MUTATION_TYPE = 'create';
+    const MUTATION_TYPE = 'update';
 
     public function register_hooks() : void {
         add_action('graphql_register_types', [$this, 'register_input_fields']);
