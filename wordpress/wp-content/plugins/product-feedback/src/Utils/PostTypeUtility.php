@@ -53,7 +53,7 @@ trait PostTypeUtility {
 	protected function generate_fields(string $singular, array $post_type_fields) : array {
 		$fields = [];
 
-		foreach ($post_type_fields as $field => $details) {
+		foreach($post_type_fields as $field => $details) {
 			$fields[$field] = [
 				'type'        => $details['type'] ?: 'String',
 				'description' => __("{$singular} {$field}", self::$text_domain),
@@ -65,5 +65,47 @@ trait PostTypeUtility {
 		}
 
 		return $fields;
+    }
+
+	/**
+     * Generate fields for a post type.
+	 *
+	 * @param string $singular          Uppercase, singular label.
+	 * @param array  $post_type_fields  Post type fields.
+	 *
+	 * @return array Fields.
+     */
+    protected function generate_input(string $singular, array $post_type_inputs) : array {
+        $inputs = $this->generate_fields($singular, $post_type_inputs);
+
+        foreach($post_type_inputs as $input => $details) {
+            unset($inputs[$input]['resolve']);
+        }
+
+        return $inputs;
+    }
+
+	/**
+     * Generate mutation id
+	 *
+	 * @param string $mutation_type     lowercase, mutation name (create, update, etc).
+	 * @param string $singular          Uppercase, singular label.
+	 *
+	 * @return string Mutation ID.
+     */
+	protected function generate_mutation_id(string $mutation_type, string $singular) : string {
+		return strtolower($mutation_type) . $singular; 
+	}
+
+	/**
+     * Generate mutation input group name
+	 *
+	 * @param string $mutation_type     Uppercase, mutation name (Create, Update, etc).
+	 * @param string $singular          Uppercase, singular label.
+	 *
+	 * @return string Input Name.
+     */
+	protected function generate_mutation_input_name(string $mutation_type, string $singular) : string {
+		return ucfirst(strtolower($mutation_type)) . $singular . 'Input';
 	}
 }

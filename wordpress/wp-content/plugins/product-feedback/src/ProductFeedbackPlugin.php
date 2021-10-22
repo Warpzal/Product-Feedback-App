@@ -16,6 +16,7 @@ final class ProductFeedbackPlugin {
 
 	private function create_instances() {
 		$this->instances['suggestion_post_type'] = new PostTypes\SuggestionPostType();
+		$this->instances['create_suggestion_mutation'] = new GraphQL\Mutations\SuggestionMutations\CreateSuggestion();
 	}
 
 	private function register_hooks() {
